@@ -1,0 +1,14 @@
+mixin picture(name, ext)
+    picture
+        if ext!='svg'
+            source(type="image/webp",srcset="img/"+name+".webp")
+        img(class!=attributes.class, alt="",src="img/"+name+"."+ext)
+
+mixin img(name)
+    img(class!=attributes.class, alt="",src="img/"+name)
+
+
+
+mixin svgSprite(name)
+    svg.icon(class=` _${name}`)
+        use(xlink:href='img/sprite.svg#' + name)
