@@ -199,10 +199,13 @@ gulp.task('vendor-css', function(){
 gulp.task('page-js', function(done) {
 		return gulp.src(path.join(p.src.js, '/**/*.js'))
 		.pipe(plumber())
-        .pipe(newer( p.build.css+'all.min.js'))
-		.pipe(concat( 'all.js'))
+        .pipe(newer(p.build.css + 'all.min.js'))
+        .pipe(babel({
+        presets: ["@babel/preset-env"]
+        }))
+        .pipe(concat('all.js'))
 		.pipe(gulp.dest(p.build.js))
-		.pipe(uglify())
+        .pipe(uglify())
 		.pipe(rename('all.min.js'))
 		.pipe(gulp.dest(p.build.js));
    

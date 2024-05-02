@@ -1,0 +1,138 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	pointer-events: none;
+	display: none;
+	background-color: #151e2e;
+
+	&__text {
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 36px;
+		/* or 129% */
+
+		text-align: center;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+
+		color: #ffffff;
+	}
+	&__logo {
+		position: absolute;
+		left: 40px;
+		top: 44px;
+		color: #fff;
+		z-index: 11;
+		fill: #fff;
+	}
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		left: 0px;
+		top: 0;
+		z-index: 10;
+		height: 100%;
+		width: 100%;
+		padding: 20px;
+		flex-direction: row;
+	}
+	&__imgs {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		&::after {
+			display: block;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 3;
+			background-color: rgba(17, 24, 36, 0.5);
+			background-repeat: repeat;
+		}
+		&::before {
+			display: block;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 3;
+			background-image: url(../img/noise.png);
+			background-repeat: repeat;
+			opacity: 0.45;
+		}
+	}
+	@keyframes ptop {
+		from {
+			top: -300px;
+		}
+		to {
+			top: calc(300px + 100vh);
+		}
+	}
+	@keyframes pdown {
+		from {
+			top: 0;
+		}
+		to {
+			top: -100vh;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		animation: pdown 25s linear infinite;
+		// &-1 {
+		// 	margin-left: -45%;
+		// 	animation: pdown 136s linear infinite;
+		// }
+		// &-2 {
+		// 	margin-left: -490px;
+		// 	animation: ptop 146s linear infinite;
+		// }
+		// &-3 {
+		// 	margin-left: -232px;
+		// 	animation: pdown 129s linear infinite;
+		// }
+		// &-4 {
+		// 	margin-left: 32px;
+		// 	animation: pdown 182s linear infinite;
+		// }
+		// &-5 {
+		// 	margin-left: 32px;
+		// 	animation: ptop 162s linear infinite;
+		// }
+		// &-6 {
+		// 	margin-left: 143px;
+		// 	animation: pdown 176s linear infinite;
+		// }
+		// &-7 {
+		// 	margin-left: 417px;
+		// 	animation: pdown 130s linear infinite;
+		// }
+		// &-8 {
+		// 	margin-left: 417px;
+		// 	animation: ptop 156s linear infinite;
+		// }
+		// &-9 {
+		// 	margin-left: 46%;
+
+		// 	animation: pdown 176s linear infinite;
+		// }
+	}
+}

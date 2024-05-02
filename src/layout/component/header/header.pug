@@ -1,0 +1,83 @@
+header.header
+    .inner
+        .header__row 
+            a.header__logo(href="#")
+                svg
+                    use(xlink:href="img/sprite.svg#logo")
+            .header__title Административно территориальное деление
+
+            button.header__help(type="button")
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.5 17.3929V14.5H15.4643C17.062 14.5 18.3571 13.2048 18.3571 11.6071V11.4143C18.3571 9.92312 17.1483 8.71429 15.6571 8.71429H14.5C12.9023 8.71429 11.6071 10.0095 11.6071 11.6071M13.5357 20.2857H15.4643M14.5 28C7.04416 28 1 21.9558 1 14.5C1 7.04416 7.04416 1 14.5 1C21.9558 1 28 7.04416 28 14.5C28 21.9558 21.9558 28 14.5 28Z" />
+                </svg>
+
+.type-map
+    button.type-map__toggle(type="button")
+        span
+            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 3.99805L8 1L15 3.99805M1 3.99805L8 6.99609M1 3.99805V4L8 6.99609M15 3.99805L8 6.99609M15 3.99805L8 7"  stroke-linejoin="round"/>
+                <path d="M1 6.99805L8 9.99609M1 6.99805V7L8 9.99609M1 6.99805L4.5 5.49902M15 6.99805L8 9.99609M15 6.99805L8 10M15 6.99805L11.5 5.49902M1 10.002L8 13M1 10.002V10.0039L8 13M1 10.002L4.5 8.50293M15 10.002L8 13M15 10.002L8 13.0039M15 10.002L11.5 8.50293" stroke-linejoin="round"/>
+            </svg>
+            | Выберите тип карты
+    .type-map__wrapper 
+        .type-map__row 
+            .type-map__item._col-2#region._selected(data-title="АДМИНИСТРАТИВНО ТЕРРИТОРИАЛЬНОЕ ДЕЛЕНИЕ")
+                .type-map__item-bg
+                .type-map__item-content 
+                    .type-map__item-imgs 
+                        img.type-map__item-img-idle(src="img/map-type.svg", alt="")
+                        img.type-map__item-img-active(src="img/map-type-active.svg", alt="")
+                    .type-map__item-title Области
+        
+            .type-map__item#city(data-title="Районы, созданные в период дейятельности Шарафа Рашидова")
+                .type-map__item-bg
+                .type-map__item-content 
+                    .type-map__item-imgs 
+                        img.type-map__item-img-idle(src="img/map-type.svg", alt="")
+                        img.type-map__item-img-active(src="img/map-type-active.svg", alt="")
+                    .type-map__item-title Населенные 
+                        br
+                        | пункты
+        
+            .type-map__item#district(data-title="Населененные пунткы, получившие статус города")
+                .type-map__item-bg
+                .type-map__item-content 
+                    .type-map__item-imgs 
+                        img.type-map__item-img-idle(src="img/map-type.svg", alt="")
+                        img.type-map__item-img-active(src="img/map-type-active.svg", alt="")
+                    .type-map__item-title Районы
+            //- .type-map__item#station(data-title="Электро и Гидро-электростанции")
+            //-     .type-map__item-bg
+            //-     .type-map__item-content 
+            //-         .type-map__item-imgs 
+            //-             img.type-map__item-img-idle(src="img/map-type.svg", alt="")
+            //-             img.type-map__item-img-active(src="img/map-type-active.svg", alt="")
+            //-         .type-map__item-title Электро и Гидро-электростанции 
+  
+            .type-map__item#agro(data-title="Сельское хозяйство")
+                .type-map__item-bg
+                .type-map__item-content 
+                    .type-map__item-imgs 
+                        img.type-map__item-img-idle(src="img/map-type.svg", alt="")
+                        img.type-map__item-img-active(src="img/map-type-active.svg", alt="")
+                    .type-map__item-title Сельское хозяйство
+  
+
+        
+            .type-map__item#industry(data-title="Экономическая история") 
+                .type-map__item-bg
+                .type-map__item-content 
+                    .type-map__item-imgs 
+                        img.type-map__item-img-idle(src="img/map-type.svg", alt="")
+                        img.type-map__item-img-active(src="img/map-type-active.svg", alt="")
+                    .type-map__item-title Промышленность
+            
+        
+            .type-map__item#station(data-title="Электро и Гидро-электростанции") 
+                .type-map__item-bg
+                .type-map__item-content 
+                    .type-map__item-imgs 
+                        img.type-map__item-img-idle(src="img/map-type.svg", alt="")
+                        img.type-map__item-img-active(src="img/map-type-active.svg", alt="")
+                    .type-map__item-title Электро и Гидро-электростанции
+            

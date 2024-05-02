@@ -1,0 +1,38 @@
+.zoom {
+	position: absolute;
+	right: 60px;
+	bottom: 15px;
+	background: #ffffff;
+	border: 1px solid #eef1f8;
+	box-sizing: border-box;
+	border-radius: 7px;
+	z-index: 5;
+	font-size: 14px;
+	letter-spacing: 0.03em;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 38px;
+	color: #1c273d;
+	cursor: pointer;
+	transition: font-weight 0.3s;
+	[help="step-5"] & {
+		z-index: 30;
+	}
+	&:hover {
+		font-weight: 700;
+	}
+	span {
+		display: none;
+	}
+	&[data-zoom="1"] {
+		._x2 {
+			display: inline-block;
+		}
+	}
+	&[data-zoom="2"] {
+		._x1 {
+			display: inline-block;
+		}
+	}
+}

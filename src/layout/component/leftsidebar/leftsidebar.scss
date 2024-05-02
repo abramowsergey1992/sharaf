@@ -1,0 +1,258 @@
+body[maptype="industry"] #leftsidebar-industry {
+	display: block;
+}
+body[maptype="agro"] #leftsidebar-agro {
+	display: block;
+}
+
+.leftsidebar-open {
+	position: fixed;
+	left: -50px;
+	top: 50%;
+	body[maptype="industry"] &,
+	body[maptype="agro"] & {
+		left: 0;
+	}
+	&__scroll {
+		display: none;
+	}
+	transition: left 0.3s;
+	z-index: 4;
+	background: #fff;
+	width: 40px;
+	position: absolute;
+	border: 0 solid;
+	cursor: pointer;
+	height: 174px;
+	background: #fff;
+	z-index: 9;
+	transition: left 0.3s, background 0.3s;
+	transform: translateY(-50%);
+	&:hover {
+		background: #eef1f8;
+	}
+	span {
+		transform: rotate(270deg);
+		white-space: nowrap;
+		display: inherit;
+		font-size: 10px;
+		font-size: 10px;
+		left: -34px;
+		position: absolute;
+		top: 61px;
+		color: #1c273d;
+	}
+	&:hover {
+		background: #eef1f8;
+		.leftsidebar._open & {
+			background: darken($color: #eef1f8, $amount: 3);
+		}
+	}
+	.leftsidebar._open & {
+		background: #eef1f8;
+	}
+	svg {
+		stroke: $black;
+	}
+
+	&__center {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -4px;
+		margin-top: 50px;
+		transition: transform 0.3s;
+		transform: rotate(0deg);
+		.leftsidebar._open & {
+			transform: rotate(-180deg);
+		}
+	}
+}
+.leftsidebar {
+	position: fixed;
+	left: -421px;
+	height: 100%;
+	width: 421px;
+	padding-right: 0px;
+	background: #fff;
+	color: $black;
+	transition: left 0.3s;
+	top: 0;
+
+	z-index: 10;
+	padding-right: 40px;
+	&._open {
+		left: 0;
+	}
+	&__overlay {
+		position: absolute;
+		width: 0;
+		height: 0;
+		background: rgba(21, 29, 46, 0.8);
+		position: absolute;
+		left: 50%;
+		cursor: pointer;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.3s;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		.leftsidebar._open & {
+			opacity: 1;
+			width: 200vmax;
+			height: 200vmax;
+		}
+	}
+	&__toggle {
+		width: 40px;
+		position: absolute;
+		border: 0 solid;
+		right: 0;
+		top: 0;
+		height: 100%;
+		background: #fff;
+		z-index: 10;
+		transition: background 0.3s;
+		span {
+			transform: rotate(270deg);
+			white-space: nowrap;
+			display: inherit;
+			font-size: 10px;
+		}
+		&:hover {
+			background: #eef1f8;
+			.leftsidebar._open & {
+				background: darken($color: #eef1f8, $amount: 3);
+			}
+		}
+		.leftsidebar._open & {
+			background: #eef1f8;
+		}
+		svg {
+			stroke: $black;
+		}
+		&-top {
+			position: absolute;
+			left: 50%;
+			top: 45px;
+			margin-left: -7px;
+			transition: opacity 0.3s;
+			.leftsidebar._open & {
+				opacity: 0;
+			}
+		}
+		&-center {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -4px;
+			margin-top: 20px;
+			transition: transform 0.3s;
+			transform: rotate(0deg);
+			.leftsidebar._open & {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	&__scroll {
+		padding-top: 43px;
+		padding-bottom: 43px;
+		display: none;
+	}
+	&__dropdown {
+		border-bottom: 1px solid #cacfdb;
+		margin-bottom: 20px;
+	}
+	&__dropdown-block {
+		max-height: 0;
+		position: relative;
+		overflow: hidden;
+		transition: max-height 0.5s;
+		.leftsidebar__dropdown._open & {
+			max-height: 1800px;
+		}
+	}
+	&__body {
+		position: relative;
+		z-index: 10;
+		max-height: 100%;
+		height: 100%;
+		overflow: auto;
+		background: #fff;
+		padding-right: 34px;
+		padding-left: 20px;
+	}
+	&__close {
+		width: 40px;
+		border-radius: 7px;
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		border: 0 solid;
+		cursor: pointer;
+		background: #fff;
+		svg {
+			stroke: $black;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transition: stroke-width 0.3s;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&:hover {
+			svg {
+				stroke-width: 2px;
+			}
+		}
+		height: 40px;
+		box-shadow: 0px 2px 12px 0px #0000003b;
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 16px;
+		letter-spacing: -0.04em;
+		margin-bottom: 14px;
+		line-height: 133%;
+		cursor: pointer;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	&__text {
+		p {
+			font-size: 10px;
+			line-height: 16px;
+		}
+		picture {
+			display: block;
+			margin: 25px 0;
+		}
+		img {
+			border-radius: 20px;
+		}
+	}
+	&__legends {
+		padding-bottom: 26px;
+		margin-bottom: 20px;
+		display: grid;
+		align-items: center;
+		grid-template-columns: 42px auto;
+		grid-gap: 1px 10px;
+		dd {
+			font-size: 10px;
+		}
+		dt {
+			font-size: 9px;
+			letter-spacing: -0.04em;
+			text-align: center;
+			position: relative;
+			svg,
+			img {
+				display: inline-block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
+	}
+}

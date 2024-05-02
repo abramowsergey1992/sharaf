@@ -1,0 +1,74 @@
+.mpopup._text#marker-1
+    .mpopup__close
+    .mpopup__content 
+        h3 Изменение роста 
+            br
+            | дорожной сети
+        p На этой странице указаны фирменные цвета. Они используются на всех носителях фирменного стиля.
+        button.mpopup__link(data-bigpopup="#text-popup")  Подробнее
+.mpopup._img(data-bigpopup="#bigimg-popup")#marker-8
+    .mpopup__close
+    .mpopup__content 
+        .mpopup__img
+            +picture('video','jpg')
+
+.mpopup._text#marker-22
+    .mpopup__close
+    .mpopup__content 
+        h3 Изменение роста 
+            br
+            | дорожной сети
+        p На этой странице указаны фирменные цвета. Они используются на всех носителях фирменного стиля.
+.mpopup._img-text#marker-2(data-bigpopup="#bigimg-popup")  
+    .mpopup__close
+    .mpopup__content 
+        +picture('popup-1','jpg').mpopup__img
+        h3 Изменение роста 
+            br
+            | дорожной сети
+        p На этой странице указаны фирменные цвета. Они используются на всех носителях фирменного стиля.
+.mpopup._video#marker-3  
+    .mpopup__close
+    .mpopup__content 
+       .mpopup__video(data-bigpopup="#video-popup")
+            +picture('video','jpg')
+.mpopup._link#marker-4 
+    .mpopup__close
+    .mpopup__content 
+        a(href="https://ru.lipsum.com") https://ru.lipsum.com
+.mpopup._audio#marker-5
+    .mpopup__close
+    .mpopup__content 
+        .audio-player 
+            audio(controls)
+                <source src="audio/audio.mp3" type="audio/mpeg">
+            .audio-player__title Аудиодорожка
+            .audio-player__body
+                .audio-player__progress
+                    .audio-player__line
+                        .audio-player__line-progress
+                    .audio-player__status 0:00
+                    .audio-player__final 0:00
+                    .audio-player__mute
+                       <svg width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" fill="#fff"><path d="M5.38 3.356 8.57 1.23v5.524l.858.857V.428A.428.428 0 0 0 8.76.072l-3.749 2.5H4.39l.833.832c.054-.01.111-.017.158-.048ZM12 11.394.606 0 0 .606l2.571 2.571V9c0 .237.192.429.429.429h2.013l3.75 2.499a.428.428 0 0 0 .666-.357v-1.536L11.394 12l.606-.606Zm-3.429-.623-3.19-2.128a.429.429 0 0 0-.238-.072H3.429V4.035L8.57 9.177v1.594Z"/></g><defs><clipPath id="a"><path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2Z" fill="#fff"/></clipPath></defs></svg>
+
+                .audio-player__btn 
+                    .audio-player__prev     
+                        <svg width="16" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m8.553 5.929 5.555 3.802c.256.176.515.269.73.269.415 0 .672-.333.672-.891V.89c0-.557-.257-.89-.671-.89-.215 0-.47.093-.727.27L8.555 4.071C8.198 4.317 8 4.646 8 5c0 .354.195.684.553.929ZM.553 5.929 6.108 9.73c.256.176.515.269.73.269.415 0 .672-.333.672-.891V.89c0-.557-.257-.89-.671-.89-.215 0-.47.093-.727.27L.555 4.071C.198 4.317 0 4.646 0 5c0 .354.195.684.553.929Z" fill="#fff"/></svg>
+                    .audio-player__play 
+                        <svg class="audio-player__icon-play "width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.9567 4.07141L1.40209 0.268745C1.14557 0.0930086 0.887102 0 0.672268 0C0.256927 0 0 0.333341 0 0.891312V9.10998C0 9.66731 0.256603 10 0.670973 10C0.886131 10 1.14047 9.90691 1.39756 9.73069L6.95476 5.9281C7.31214 5.68316 7.51006 5.35354 7.51006 4.99955C7.51014 4.64581 7.31449 4.31628 6.9567 4.07141Z" fill="white"/>
+                        </svg>
+                    .audio-player__stop
+                        <svg class="audio-player__icon-stop " width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" width="3" height="10" rx="1" fill="white"/>
+                            <rect width="3" height="10" rx="1" fill="white"/>
+                        </svg>
+                    .audio-player__next
+                        <svg width="16" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.957 4.071 1.402.27C1.146.093.887 0 .672 0 .257 0 0 .333 0 .891V9.11c0 .557.257.89.671.89.215 0 .47-.093.727-.27l5.557-3.802c.357-.245.555-.574.555-.928 0-.354-.196-.684-.553-.929ZM14.957 4.071 9.402.27C9.146.093 8.887 0 8.672 0 8.257 0 8 .333 8 .891V9.11c0 .557.257.89.671.89.215 0 .47-.093.727-.27l5.557-3.802c.357-.245.555-.574.555-.928 0-.354-.195-.684-.553-.929Z" fill="#fff"/></svg>
+                
+.mpopup._pdf#marker-6
+    .mpopup__close
+    .mpopup__content 
+        a(href="***.pdf") 
+            span Скачать документ 

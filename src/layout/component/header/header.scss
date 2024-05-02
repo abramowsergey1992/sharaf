@@ -1,0 +1,78 @@
+.header {
+	padding: 30px 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	padding-right: 40px;
+	&::before {
+		display: block;
+		height: 167px;
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		pointer-events: none;
+		background: linear-gradient(
+			180deg,
+			#253247 31.48%,
+			rgba(37, 50, 71, 0) 100%
+		);
+	}
+	&__logo {
+		margin-right: 80px;
+		line-height: 90%;
+		z-index: 2;
+		position: relative;
+		svg {
+			fill: #fff;
+			width: 140px;
+			height: 22px;
+			transition: fill 0.3s;
+		}
+		&:hover {
+			svg {
+				fill: $gold;
+			}
+		}
+	}
+	&__title {
+		font-size: 18px;
+		line-height: 133%;
+		margin-right: 20px;
+		letter-spacing: -0.04em;
+		margin: 0 auto;
+		z-index: 2;
+		position: relative;
+		text-transform: uppercase;
+	}
+	&__help {
+		margin-right: 205px;
+		margin-left: auto;
+		background: transparent;
+		border: 0 solid;
+		padding: 0;
+		z-index: 2;
+		position: relative;
+		display: block;
+		svg {
+			stroke: #fff;
+			transition: stroke 0.3s;
+		}
+		&:hover {
+			svg {
+				stroke: $gold;
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		min-height: 40px;
+	}
+}
